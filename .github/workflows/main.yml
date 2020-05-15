@@ -9,3 +9,16 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+  artifactoryUpload:
+    name: Upload Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.2.0
+    - name: publish to artifactory
+      uses: advancedcsg-open/action-jfrog-cli@master
+      with:
+        url: 'https://ncr.jfrog.io/'
+        credentials type: 'username'
+        user: 'rg185165@ncr.com'
+        password: ${{ secrets.artifactory }}
+        args: u "README.md" "hspre-generic-snapshots/" 
