@@ -19,6 +19,6 @@ jobs:
       with:
         url: 'https://ncr.jfrog.io/'
         credentials type: 'username'
-        user: 'rg185165'
+        user: 'rg185165@ncr.com'
         password: ${{ secrets.artifactory }}
-        args: u "*.md" "/hspre-generic-group/godbee_test/" --recursive=true 
+        args: u "README.md" "/hspre-generic-group/godbee_test/" 
