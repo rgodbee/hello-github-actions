@@ -21,4 +21,4 @@ jobs:
         credentials type: 'username'
         user: 'rg185165'
         password: ${{ secrets.artifactory }}
-        args: u "*.md" "/hspre-generic-group/godbee_test/" --recursive=true --build-name=myawesomeapp
+        args: u "*.md" "/hspre-generic-group/godbee_test/" --recursive=true 
